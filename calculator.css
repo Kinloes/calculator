@@ -1,0 +1,21 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+#calcContainer{
+    border-radius: 15px;
+    width: 500px;
+    height: 600px;
+    margin-top: 100px;
+    background-color:cadetblue;
+    justify-content: center;
+    align-items: center;
+}
+#visualInput{
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 80px;
+    margin-left: 80px;
+    background-color: white;
+}
