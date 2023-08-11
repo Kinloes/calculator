@@ -4,8 +4,8 @@ body{
 }
 #calcContainer{
     border-radius: 15px;
-    width: 500px;
-    height: 600px;
+    width: 400px;
+    height: 500px;
     margin-top: 100px;
     background-color:cadetblue;
     justify-content: center;
@@ -14,63 +14,69 @@ body{
 #visualInput{
     text-align: end;
     border-radius: 6px;
+    height: 30px;
     padding: 10px;
     margin-top: 20px;
-    margin-right: 80px;
-    margin-left: 80px;
+    margin-right: 50px;
+    margin-left: 50px;
     background-color: white;
+    font-size: 25px;
 }
 #buttons{
-    margin-top: 50px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 #row1, #row2, #row3, #row4, #row5{
     text-align: center;
-    font-size: 25px;
-    gap: 50px;
+    gap: 6px;
 }
 #row1{
     display: flex;
-    flex: 1;
+    margin-bottom: 20px;
 }
-#row1 div{
-    background-color: blue;
-    width: 50px;
+button{
+    font-size: 20px;
+    background-color: deepskyblue;
+}
+#row1 button{
+    width: 70px;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 12px;
+}
+#divide, #multiply, #minus, #add, #delete, #clear{
+    background-color:coral;
 }
 #row2{
     display: flex;
+    margin-bottom: 20px;
 }
-#row2 div{
-    background-color: blue;
-    width: 50px;
+#row2 button{
+    width: 70px;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 #row3{
     display: flex;
+    margin-bottom: 20px;
 }
-#row3 div{
-    background-color: blue;
-    width: 50px;
+#row3 button{
+    width: 70px;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 #row4{
     display: flex;
+    margin-bottom: 20px;
 }
-#row4 div{
-    background-color: blue;
-    width: 50px;
+#row4 button{
+    width: 70px;
     height: 50px;
-    border-radius: 4px;
+    border-radius: 12px;
 }
-#row5 div{
-    background-color: blue;
-    width: 50px;
-    height: 50px;
-    border-radius: 4px;
+#row5 button{
+    width: 300px;
+    height: 60px;
+    border-radius: 12px;
 }
