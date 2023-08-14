@@ -1,53 +1,84 @@
+let inputCheck = document.getElementById("visualInput")
+
 //Button event listeners for numbers
-document.getElementById("zero").onclick = function(){
-    console.log("0")
+document.getElementById("numZero").onclick = function(){
+    console.log("0");
+    let addInput = document.createTextNode("0")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("one").onclick = function(){
-    console.log("1")
+document.getElementById("numOne").onclick = function(){
+    console.log("1");
+    let addInput = document.createTextNode("1")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("two").onclick = function(){
-    console.log("2")
+document.getElementById("numTwo").onclick = function(){
+    console.log("2");
+    let addInput = document.createTextNode("2")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("three").onclick = function(){
-    console.log("3")
+document.getElementById("numThree").onclick = function(){
+    console.log("3");
+    let addInput = document.createTextNode("3")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("four").onclick = function(){
-    console.log("4")
+document.getElementById("numFour").onclick = function(){
+    console.log("4");
+    let addInput = document.createTextNode("4")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("five").onclick = function(){
-    console.log("5")
+document.getElementById("numFive").onclick = function(){
+    console.log("5");
+    let addInput = document.createTextNode("5")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("six").onclick = function(){
-    console.log("6")
+document.getElementById("numSix").onclick = function(){
+    console.log("6");
+    let addInput = document.createTextNode("6")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("seven").onclick = function(){
-    console.log("7")
+document.getElementById("numSeven").onclick = function(){
+    console.log("7");
+    let addInput = document.createTextNode("7")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("eight").onclick = function(){
-    console.log("8")
+document.getElementById("numEight").onclick = function(){
+    console.log("8");
+    let addInput = document.createTextNode("8")
+    inputCheck.appendChild(addInput)
 }
-document.getElementById("nine").onclick = function(){
-    console.log("9")
+document.getElementById("numNine").onclick = function(){
+    console.log("9");
+    let addInput = document.createTextNode("9")
+    inputCheck.appendChild(addInput)
 }
+
 //Button event listeners for commands
 document.getElementById("equal").onclick = function(){
-    console.log("=")
+    console.log("=");
 }
 document.getElementById("clear").onclick = function(){
-    console.log("clear")
+    console.log("clear");
 }
 document.getElementById("delete").onclick = function(){
-    console.log("delete")
+    console.log("delete");
 }
 document.getElementById("add").onclick = function(){
-    console.log("+")
+    console.log("+");
+    let addInput = document.createTextNode("+")
+    inputCheck.appendChild(addInput)
 }
 document.getElementById("minus").onclick = function(){
-    console.log("-")
+    console.log("-");
+    let addInput = document.createTextNode("-")
+    inputCheck.appendChild(addInput)
 }
 document.getElementById("multiply").onclick = function(){
-    console.log("*")
+    console.log("*");
+    let addInput = document.createTextNode("*")
+    inputCheck.appendChild(addInput)
 }
 document.getElementById("divide").onclick = function(){
-    console.log("/")
+    console.log("/");
+    let addInput = document.createTextNode("/")
+    inputCheck.appendChild(addInput)
 }
