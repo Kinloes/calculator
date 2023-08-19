@@ -1,5 +1,39 @@
-let inputCheck = document.getElementById("visualInput")
-
+//Change it so that the operands appear in a separate div on the left side of the visualInput display
+let inputCheck = document.getElementById("visualInput");
+let operandCheck = document.getElementById("operandVisual")
+let userInput = Number(inputCheck.textContent)
+let opClass = document.getElementsByClassName("operand");
+function operatorFunc() {
+    if (operandCheck.textContent === ""){
+        console.log("Nuttin works")
+        userInput = Number(inputCheck.textContent);
+    }
+    if (operandCheck.textContent === "+"){
+        console.log("PLUS WORKS")
+        operandCheck.textContent = "";
+        userInput = userInput + Number(inputCheck.textContent);
+    }
+    if (operandCheck.textContent === "-"){
+        console.log("MINUS WORKS")
+        operandCheck.textContent = "";
+        userInput = userInput - Number(inputCheck.textContent);
+    }
+    if (operandCheck.textContent === "*"){
+        console.log("multiply works")
+        operandCheck.textContent = "";
+        userInput = userInput * Number(inputCheck.textContent)
+    }
+    if (operandCheck.textContent === "/"){
+        console.log("divide works")
+        operandCheck.textContent = "";
+    }
+    if (operandCheck.textContent === "="){
+        console.log("equal works");
+        operandCheck.textContent = "";
+    }
+    console.log (userInput);
+    inputCheck.textContent = ""
+  }
 //Button events for displaying number inputs
 document.getElementById("numZero").onclick = function(){
     console.log("0");
@@ -55,35 +89,47 @@ document.getElementById("numNine").onclick = function(){
 //Button events for displaying non-number inputs 
 document.getElementById("equal").onclick = function(){
     console.log("=");
+    operatorFunc();
+    addInput = document.createTextNode("=");
+    operandCheck.appendChild(addInput);
+    addInput = document.createTextNode(userInput);
+    inputCheck.appendChild(addInput);
+    console.log(userInput);
+    userInput = 0;
 }
 document.getElementById("clear").onclick = function(){
     console.log("clear");
     inputCheck.textContent = "";
+    operandCheck.textContent = ""
 }
 document.getElementById("delete").onclick = function(){
     console.log("delete");
-    let test = inputCheck.textContent;
-    del = test.slice(0,-1);
-    console.log(del)
-    inputCheck.textContent = del
+    let del = inputCheck.textContent;
+    delTru = del.slice(0,-1);
+    console.log(delTru)
+    inputCheck.textContent = delTru
 }
 document.getElementById("add").onclick = function(){
     console.log("+");
-    let addInput = document.createTextNode(" + ");
-    inputCheck.appendChild(addInput);
+    operatorFunc();
+    addInput = document.createTextNode("+");
+    operandCheck.appendChild(addInput);
 }
 document.getElementById("minus").onclick = function(){
     console.log("-");
-    let addInput = document.createTextNode(" - ");
-    inputCheck.appendChild(addInput);
+    operatorFunc();
+    addInput = document.createTextNode("-");
+    operandCheck.appendChild(addInput);
 }
 document.getElementById("multiply").onclick = function(){
     console.log("*");
-    let addInput = document.createTextNode(" * ");
-    inputCheck.appendChild(addInput);
+    operatorFunc();
+    let addInput = document.createTextNode("*");
+    operandCheck.appendChild(addInput);
 }
 document.getElementById("divide").onclick = function(){
     console.log("/");
+    operatorFunc();
     let addInput = document.createTextNode("/");
-    inputCheck.appendChild(addInput);
+    operandCheck.appendChild(addInput);
 }
