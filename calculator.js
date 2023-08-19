@@ -1,35 +1,49 @@
 //Change it so that the operands appear in a separate div on the left side of the visualInput display
 let inputCheck = document.getElementById("visualInput");
-let operandCheck = document.getElementById("operandVisual")
+let operatorCheck = document.getElementById("operandVisual")
 let userInput = Number(inputCheck.textContent)
 let opClass = document.getElementsByClassName("operand");
 function operatorFunc() {
-    if (operandCheck.textContent === ""){
+    if (operatorCheck.textContent === ""){
         console.log("Nuttin works")
         userInput = Number(inputCheck.textContent);
     }
-    if (operandCheck.textContent === "+"){
+    if (operatorCheck.textContent === "+"){
         console.log("PLUS WORKS")
-        operandCheck.textContent = "";
+        operatorCheck.textContent = "";
         userInput = userInput + Number(inputCheck.textContent);
     }
-    if (operandCheck.textContent === "-"){
+    if (operatorCheck.textContent === "-"){
         console.log("MINUS WORKS")
-        operandCheck.textContent = "";
+        operatorCheck.textContent = "";
         userInput = userInput - Number(inputCheck.textContent);
     }
-    if (operandCheck.textContent === "*"){
+    if (operatorCheck.textContent === "*"){
         console.log("multiply works")
-        operandCheck.textContent = "";
-        userInput = userInput * Number(inputCheck.textContent)
+        operatorCheck.textContent = "";
+        if (inputCheck.textContent !== ""){
+            console.log("testintru")
+            userInput = userInput * Number(inputCheck.textContent)
+        }
+        else{
+            console.log("ERROR")
+        }
     }
-    if (operandCheck.textContent === "/"){
+    if (operatorCheck.textContent === "/"){
         console.log("divide works")
-        operandCheck.textContent = "";
+        operatorCheck.textContent = "";
+        if (inputCheck.textContent !== ""){
+            console.log("testintru")
+            userInput = userInput / Number(inputCheck.textContent)
+        }
+        else{
+            console.log("ERROR")
+        }
     }
-    if (operandCheck.textContent === "="){
+    if (operatorCheck.textContent === "="){
         console.log("equal works");
-        operandCheck.textContent = "";
+        operatorCheck.textContent = "";
+        //IMPORTANT NOTE - Need to make equal reset everything on a number press and continue the formula on a operand press (equal currently resets the userInput value)
     }
     console.log (userInput);
     inputCheck.textContent = ""
@@ -91,7 +105,7 @@ document.getElementById("equal").onclick = function(){
     console.log("=");
     operatorFunc();
     addInput = document.createTextNode("=");
-    operandCheck.appendChild(addInput);
+    operatorCheck.appendChild(addInput);
     addInput = document.createTextNode(userInput);
     inputCheck.appendChild(addInput);
     console.log(userInput);
@@ -100,7 +114,8 @@ document.getElementById("equal").onclick = function(){
 document.getElementById("clear").onclick = function(){
     console.log("clear");
     inputCheck.textContent = "";
-    operandCheck.textContent = ""
+    operatorCheck.textContent = "";
+    userInput = 0;
 }
 document.getElementById("delete").onclick = function(){
     console.log("delete");
@@ -113,23 +128,23 @@ document.getElementById("add").onclick = function(){
     console.log("+");
     operatorFunc();
     addInput = document.createTextNode("+");
-    operandCheck.appendChild(addInput);
+    operatorCheck.appendChild(addInput);
 }
 document.getElementById("minus").onclick = function(){
     console.log("-");
     operatorFunc();
     addInput = document.createTextNode("-");
-    operandCheck.appendChild(addInput);
+    operatorCheck.appendChild(addInput);
 }
 document.getElementById("multiply").onclick = function(){
     console.log("*");
     operatorFunc();
     let addInput = document.createTextNode("*");
-    operandCheck.appendChild(addInput);
+    operatorCheck.appendChild(addInput);
 }
 document.getElementById("divide").onclick = function(){
     console.log("/");
     operatorFunc();
     let addInput = document.createTextNode("/");
-    operandCheck.appendChild(addInput);
+    operatorCheck.appendChild(addInput);
 }
