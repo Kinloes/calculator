@@ -5,7 +5,7 @@ body{
 #calcContainer{
     border-radius: 15px;
     width: 400px;
-    height: 500px;
+    height: 480px;
     margin-top: 100px;
     background-color:rgb(168, 168, 168);
     justify-content: center;
@@ -16,18 +16,19 @@ body{
     width: 40px;
     margin-left: 55px;
     margin-top: 22px;
-    font-size: 25px;
+    font-size: 30px;
     position:absolute;
 }
 #visualInput{
     text-align: end;
     border-radius: 6px;
-    height: 30px;
+    height: 50px;
     margin-top: 20px;
     margin-right: 50px;
     margin-left: 50px;
     background-color: white;
-    font-size: 25px;
+    font-size: 40px;
+    vertical-align: middle;
 }
 #buttons{
     margin-top: 25px;
